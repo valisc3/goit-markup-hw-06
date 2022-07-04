@@ -326,22 +326,25 @@
           </li>
         </ul>
       </div>
-      <form class="form-subscription">
-        <label for="email" class="footer-label">
-          <p class="form-title">Подпишитесь на рассылку</p>
-          <input type="text" name="email" id="email" placeholder="E-mail" autocomplete="on" class="form-field" />
-        </label>
-        <button type="submit" class="btn-subscribtion">Подписаться
-          <img src="./images/icon-send.svg" alt="Отправить" class="icon-submit">
-        </button>
-      </form>
+      <div class="form-subscription">
+        <p class="form-title">Подпишитесь на рассылку</p>
+        <form class="footer-form">
+          <label for="email" class="footer-label">
+            <input required type="text" name="email" id="email" placeholder="E-mail" autocomplete="on"
+              class="form-field" />
+          </label>
+          <button type="submit" class="btn-subscribtion">Подписаться
+            <img src="./images/icon-send.svg" alt="Отправить" class="icon-submit">
+          </button>
+        </form>
+      </div>
     </div>
   </footer>
   <div data-modal class="backdrop is-hidden">
     <div class="modal">
       <button data-modal-close type="button" class="icon-close">
         <svg class="close-modal" width="18" height="18">
-          <use href="./images/close-black.svg"></use>
+          <use href="./images/modal-icons.svg#icon-close-black"></use>
         </svg>
       </button>
       <form class="form" autocomplete="off">
@@ -350,24 +353,24 @@
           <label for="name" class="form-label">Имя</label>
           <input type="text" name="name" id="name" class="form-input" required />
           <svg width="18" height="18" class="icon-input person">
-            <use href="./images/person-black.svg"></use>
+            <use href="./images/modal-icons.svg#icon-person-black"></use>
           </svg>
         </div>
         <div class="form-modal">
           <label for="tel" class="form-label">Телефон</label>
           <input type="tel" name="tel" id="tel" class="form-input" required />
           <svg width="18" height="18" class="icon-input phone">
-            <use href="./images/phone-black.svg"></use>
+            <use href="./images/modal-icons.svg#icon-phone-black"></use>
           </svg>
         </div>
         <div class="form-modal">
           <label for="mail" class="form-label">Почта</label>
           <input type="email" name="mail" id="mail" class="form-input" required />
           <svg width="18" height="18" class="icon-input email">
-            <use href="./images/email-black.svg"></use>
+            <use href="./images/modal-icons.svg#icon-email-black"></use>
           </svg>
         </div>
-        <div class="form-modal">
+        <div class="form-textarea">
           <label for="comment">Комментарий</label>
           <textarea name="comment" id="comment" rows="6" placeholder="Введите текст" class="comment"></textarea>
         </div>

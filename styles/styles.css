@@ -501,9 +501,11 @@ address {
 }
 /* --------FOOTER-SUBSCRIPTION-------- */
 .form-subscription {
-  display: flex;
   align-items: flex-end;
   margin-left: auto;
+}
+.footer-form {
+  display: flex;
 }
 .footer-label {
   display: flex;
@@ -707,10 +709,7 @@ address {
   transform: translate(-50%, -50%);
   transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-bottom: 50px;
-  padding-left: 40px;
+  padding: 40px;
 
   width: 528px;
   height: 581px;
@@ -725,18 +724,35 @@ address {
   transform: translate(-50%, -50%) scale(0.1) rotate(-180deg);
 }
 .icon-close {
+  transition: color var(--transition);
+
   position: absolute;
   top: 8px;
   right: 8px;
-  display: inline-block;
-  background-image: url(../images/close-black.svg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
   background-color: inherit;
+
   background-size: 18px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
   background-position: center;
+}
+.close-modal {
+  fill: currentColor;
+  width: 60px;
+}
+.close-modal:hover,
+.close-modal:focus {
+  fill: var(--accent-color);
 }
 /* --------MODAL-FORM-------- */
 .form {
@@ -758,10 +774,14 @@ address {
   display: flex;
   flex-direction: column;
 }
-.form-modal:not(:last-child) {
+.form-modal {
   margin-bottom: 10px;
 }
-.form-modal label {
+.form-textarea {
+  margin-bottom: 20px;
+}
+.form-modal label,
+.form-textarea label {
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -899,15 +919,6 @@ address {
   background-position: center;
   fill: var(--btn-text-color);
   transition: fill var(--transition);
-}
-.icon-input.person {
-  background-image: url(../images/person-black.svg);
-}
-.icon-input.phone {
-  background-image: url(../images/phone-black.svg);
-}
-.icon-input.email {
-  background-image: url(../images/email-black.svg);
 }
 .form-modal:focus-within .icon-input {
   color: var(--accent-color);
